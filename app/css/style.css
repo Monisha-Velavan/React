@@ -1,0 +1,61 @@
+.div1 h1{
+    background-color: red;
+}
+h2{
+    color: red;
+}
+.s1 h2{
+    background-color: blue;
+}
+.menu{
+    display: flex;
+    flex-direction:row;
+    list-style:none;
+}
+.form{
+    margin-left: 400px;
+    font-size: 30px;
+}
+.menu li{
+    margin: 5px;
+}
+a{
+    text-decoration: none;
+}
+.active{
+    background-color: aqua;
+}
+.footer{
+    text-align: center;
+}
+.content{
+    display:flex;
+    flex-direction: row;
+}
+.content div{
+    height:25vh;
+    width:25%;
+    border: 1px solid #000;
+}
+a:hover{
+    color: red;
+    text-decoration: underline;
+}
+@media (max-width:600px){
+    .menu{
+        display: none;
+        flex-direction: column;
+    }
+    .content{
+        flex-direction: column;
+    }
+    .content div{
+        width:100%;
+    }
+    body{
+        background-color: blue;
+    }
+    .footer{
+        font-size: 50px;
+    }
+}
