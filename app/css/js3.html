@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <input type="text" id="input_id">
+    <h1 id="h1_id">This is Heading</h1>
+    <h2 id="h2_id">javascript</h2>
+    <button id="btn_id">click</button>
+</body>
+<script>
+    //document.getElementById("btn_id").addEventListener("click", changetext);
+    document.querySelector("#btn_id").addEventListener("click", changetext);
+
+    function changetext(){
+        let val=document.getElementById("input_id").value;
+        if(val==""){
+            alert("Please enter something in the input box");
+            return false;
+        }
+        
+        console.log(val);
+        document.getElementById("h1_id").innerHTML=val;
+        document.getElementById("h2_id").innerHTML="this is from javascript";
+    }
+
+    
+    
+    
+</script>
+</html>

@@ -41,6 +41,12 @@ a:hover{
     color: red;
     text-decoration: underline;
 }
+.red{
+    color: red;
+}
+.blue{
+    color: blue;
+}
 @media (max-width:600px){
     .menu{
         display: none;

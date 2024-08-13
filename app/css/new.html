@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Textbox Validation</title>
+    <style>
+        /* Default textbox style */
+        #myTextbox {
+            padding: 5px;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+        }
+        
+        /* Red border for empty textbox */
+        .error {
+            border: 2px solid red;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="myTextbox" placeholder="Enter some text">
+    <button id="submitButton">Submit</button>
+
+    <script>
+        // Function to validate the textbox on button click
+        function validateTextbox() {
+            var textbox = document.getElementById('myTextbox');
+            if (textbox.value === '') {
+                // Add red border if the textbox is empty
+                textbox.style.border = "2px solid red";
+            } else {
+                // Remove red border if the textbox has value
+                textbox.style.border = "2px solid #ccc";
+            }
+        }
+
+        // Attach the validateTextbox function to the button's click event
+        document.getElementById('submitButton').onclick = validateTextbox;
+    </script>
+</body>
+</html>
