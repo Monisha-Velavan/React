@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import Login from './Login';
-import register from './register'
+import register from './register';
 
 function App() {
     return (
