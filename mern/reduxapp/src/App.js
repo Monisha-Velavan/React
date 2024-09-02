@@ -1,27 +1,31 @@
+import React from 'react';
+import logo from './logo.svg';
 import './App.css';
-import {createBrowserRouter,RouterProvider,} from "react-router-dom";
-import {Provider} from 'react-redux';
-import Header from './Header';
+import{ Provider } from 'react-redux';
+import { myStore } from './redux/Config';
 import Home from './Home';
-import Abouts from './Abouts';
+import About from './About';
 import Contact from './Contact';
-import { myStore } from './linux/config';
+import Header from './Header';
+import Web from './Web';
 
-let routerPaths=createBrowserRouter([
-  {"path":"/Header","element":<Header/>},
-  {"path":"/Home","element":<Home/>},
-  {"path":"/Abouts","element":<Abouts/>},
-  {"path":"/Contact","element":<Contact/>},
-])
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+
+const routerPaths = createBrowserRouter([
+  { path: "/", element: <Home/> },
+  { path: "/home", element: <Home/> },
+  { path: "/about", element: <About/> },
+  { path: "/contact", element: <Contact/> },
+  {path: "/Web", element: <Web/>}
+]);
+
 function App() {
   return (
-    <Provider store={myStore}>
+    <Provider store = {myStore}>
     <div className="App">
-      <RouterProvider router={routerPaths}/>
-     
+      <RouterProvider router={routerPaths} />      
     </div>
     </Provider>
-    
   );
 }
 

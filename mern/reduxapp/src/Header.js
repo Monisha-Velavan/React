@@ -1,10 +1,16 @@
-function Header(){
+import React from "react"
+import { NavLink } from "react-router-dom";
+function Header() {
     return(
-        <ul>
-            <li><a href="./Home">Home</a></li>
-            <li><a href="./Abouts">About</a></li>
-            <li><a href="./Contact">Contact</a></li>
-        </ul>
+        <div>
+            <h1>Navbar</h1>
+
+               <NavLink to ="/home" > Home</NavLink><br/>
+               <NavLink to = "/about">About</NavLink><br/>
+               <NavLink to = "/contact">Contact</NavLink>  <br/>     
+               <NavLink to = "/ web">Contact</NavLink>  <br/>              
+                
+        </div>
     );
 }
-export default Header
+export default Header;
